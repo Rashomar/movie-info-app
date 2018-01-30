@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Movie Info App</title>
+	<link href="https://fonts.googleapis.com/css?family=Lato|Oswald" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+<body>
+	<div class="outer">
+	<div class="appContainer">
+		<header>
+			<img src="logo.svg" class="appLogo" alt="Movie poster">
+			<div class="search">
+				<input type="text" class="appInput" placeholder="Search Movie Title...">
+				<ol id="list"></ol>
+			</div>
+		</header>
+		<section>
+			<div class="textContent">
+				<h1 id="title"></h1>
+				<h3 id="tagline"></h3>
+				<p id="plot"></p>
+				<div class="row">
+					<div class="col-6">Original Release: <span id="releaseDate"></span></div>
+					<div class="col-6">Running Time: <span id="runtime"></span></div>
+					<div class="col-6">Box Office: <span id="revenue"></span></div>
+					<div class="col-6">Vote Average: <span id="voteAverage"></span></div>
+				</div>
+			</div>
+			<div class="imageContent">
+				<img src="" alt="" id="imageid" class="poster">
+			</div>
+		</section>
+		</div>
+	</div>
+	<script src='script.js'></script>
+</body>
+</html>

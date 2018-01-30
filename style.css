@@ -1,0 +1,181 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background: black;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-size: 16px;
+}
+
+.outer {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.85) 15%, rgba(0, 0, 0, 0.2) 40%, #000 90%);
+  background-attachment: fixed;
+  margin: 0;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  overflow-y: scroll;
+}
+
+.appContainer {
+  height: 100vh;
+  margin: 0 16px;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+}
+header .appLogo {
+  margin: 25px auto 25px;
+  height: 70px;
+}
+header .search {
+  position: relative;
+  margin-bottom: 28px;
+}
+header .search .appInput {
+  color: white;
+  width: 100%;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1.2px solid;
+  font-size: 16px;
+}
+header .search .appInput:focus {
+  outline: none;
+}
+
+#list {
+  color: #a0a0a0;
+  position: absolute;
+  width: 100%;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background: rgba(0, 0, 0, 0.85);
+  border-radius: 4px;
+  background-clip: padding-box;
+}
+
+li {
+  padding-left: 2px;
+  font-size: 19px;
+  padding-top: 0;
+  margin-top: 8px;
+  cursor: pointer;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 10px;
+}
+section .textContent {
+  flex: 50%;
+  margin-bottom: 20px;
+  order: 1;
+}
+section .textContent h1 {
+  font-size: 29px;
+  text-transform: uppercase;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+}
+section .textContent h3 {
+  color: #00FC87;
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 300;
+}
+section .textContent p {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.8);
+}
+section .row {
+  flex-wrap: wrap;
+  display: flex;
+  margin-top: 30px;
+}
+section .col-6 {
+  flex: 50%;
+}
+section .col-6 span {
+  display: block;
+  margin-bottom: 20px;
+  color: #00FC87;
+}
+section .imageContent img {
+  width: 100%;
+}
+
+@media screen and (min-width: 680px) {
+  .appContainer h1 {
+    margin-top: 0;
+    margin-bottom: 12px;
+  }
+  .appContainer h3 {
+    padding-top: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .appContainer p {
+    margin-top: 8px;
+  }
+  .appContainer .search {
+    position: relative;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  section {
+    flex-direction: row;
+  }
+  section .textContent {
+    padding-left: 20px;
+  }
+  section .imageContent {
+    width: 350px;
+  }
+
+  span {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 1120px) {
+  .appContainer {
+    margin: 10px 14%;
+  }
+  .appContainer .appLogo {
+    margin-top: 0;
+  }
+  .appContainer .search {
+    padding: 0;
+    width: 50%;
+  }
+  .appContainer h1#title {
+    font-size: 34px;
+  }
+  .appContainer span {
+    font-size: 23px;
+  }
+}
